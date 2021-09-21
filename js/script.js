@@ -29,3 +29,19 @@ inputPrimeiroNome.placeholder = "Digite seu primeiro nome";
 
 //OPÇÃO 2
 // inputPrimeiroNome.placeholder = inputPrimeiroNome.placeholder.replace("nome completo", "primeiro nome") 
+
+
+// ATIVIDADE 2
+
+// EX 1
+const formInputs = document.querySelectorAll('.form-auth input');
+
+formInputs.forEach(input => input.style.borderRadius = "4px");
+
+// EX 3
+const { body } = document;
+
+body.style.backgroundColor = "#666";
+
+// EX 4
+// body.style.cssText = "background-color: #666; color: red";
