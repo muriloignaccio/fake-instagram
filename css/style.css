@@ -39,7 +39,7 @@ header{
 .content {
   display: flex;
   justify-content: center;
-  margin-top: 25px;
+  margin-top: 50px;
   align-items: center;
   flex-direction: column;
 }
@@ -66,6 +66,12 @@ header nav *{
 }
 a{
   color:black;
+}
+
+#more{
+  border: 1px solid gray;
+  border-radius: 20px;
+  padding: 10px 20px;
 }
 
 
