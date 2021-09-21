@@ -1,31 +1,22 @@
-const divUsername = document.querySelector('div.username')
-
-divUsername.innerHTML = "<span>Nome Usuário</span>"
-
-//EXERCÍCIO 2
-
-// OPÇÃO 1
+const divUsername = document.querySelector("div.username");
 const spanUsername = document.createElement("span");
 spanUsername.innerText = "Nome Usuário";
 spanUsername.className = "username";
-divUsername.parentNode.replaceChild(spanUsername, divUsername);
+// divUsername.parentNode.replaceChild(spanUsername, divUsername);
 
+divUsername.replaceWith(spanUsername);
 
-
-// OPÇÃO 2
-// divUsername.replaceWith(spanUsername);
-
-
-//OPÇÃO 3
-// const divAvatar = document.querySelector('.avatar-content');
-
-// divAvatar.removeChild(divUsername);
-
-// divAvatar.innerHTML += "<span>Nome Usuário</span>"
-
-const [ inputPrimeiroNome ] = document.getElementsByName('name');
-
+const inputPrimeiroNome = document.querySelector('input[name="name"]');
 inputPrimeiroNome.placeholder = "Digite seu primeiro nome";
 
-//OPÇÃO 2
-// inputPrimeiroNome.placeholder = inputPrimeiroNome.placeholder.replace("nome completo", "primeiro nome") 
+// Atividade II - Exercício 1
+const inputsFormCadastro = document.querySelectorAll(
+  "form.form-auth.card > input"
+);
+
+inputsFormCadastro.forEach((input) => {
+  input.style.borderRadius = "4px";
+});
+
+// Atividade II - Exercício 3
+document.querySelector("body").style.backgroundColor = "#fafafa"
