@@ -45,3 +45,5 @@ body.style.backgroundColor = "#666";
 
 // EX 4
 // body.style.cssText = "background-color: #666; color: red";
+
+

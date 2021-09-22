@@ -5,6 +5,7 @@
   <title>Fake Insta</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel='stylesheet' href='./css/style.css' />
+
 </head>
 
 <body>
@@ -49,8 +50,8 @@
       <div class="card-body">
         <div class="card-itens">
           <div class="likes">
-            <img src="./img/icons/heart.svg" width="24px">
-            <b>1 likes</b>
+            <img src="./img/icons/heart.svg" width="24px" class="likeBtn">
+            <span id="count">0</span><b>likes</b>
           </div>
           <b>Postado no dia: 00/00/0000</b>
         </div>
@@ -66,6 +67,8 @@
     </div>
     <button id="more">Ver Mais</button>
   </main>
+
+  <script src="/js/feedScript.js"></script>
 </body>
 
 </html>

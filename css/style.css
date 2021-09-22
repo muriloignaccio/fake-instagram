@@ -136,9 +136,11 @@ a{
   align-items: center;
 }
 
-.likes b{
-  margin-left: 10px;
+.likes span {
+  margin: 0 8px
 }
+
+
 
 .card-comments{
     font-size: 14px;
