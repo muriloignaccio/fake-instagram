@@ -96,7 +96,7 @@ a{
 }
 
 .card {
-    margin: 20px;
+    margin: 20px 200px;
     border: 1px solid #d7d7d7;
     border-radius: 4px;
 }
@@ -215,4 +215,14 @@ a{
   #banner{
     display: none;
   }
+}
+
+.like{
+  display: none;
+}
+.not-like{
+  display: none;
+}
+.show-like{
+  display: inline;
 }

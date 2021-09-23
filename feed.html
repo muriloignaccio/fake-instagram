@@ -5,6 +5,7 @@
   <title>Fake Insta</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel='stylesheet' href='./css/style.css' />
+  <script defer src="./js/scriptFeed.js"></script>
 </head>
 
 <body>
@@ -35,7 +36,7 @@
     </div>
   </header>
   <main class="container content">
-    <div class="card" id="">
+    <div class="card" id="1">
       <div class="card-header">
         <div>
           <img class="avatar" src="./img/avatar-example.png">
@@ -49,8 +50,9 @@
       <div class="card-body">
         <div class="card-itens">
           <div class="likes">
-            <img src="./img/icons/heart.svg" width="24px">
-            <b>1 likes</b>
+            <img src="./img/red-heart.png" width="24px" class="like not-show-like">
+            <img src="./img/icons/heart.svg" width="24px" class="not-like show-like">
+            <b><span id="qtdLikes">1</span> likes</b>
           </div>
           <b>Postado no dia: 00/00/0000</b>
         </div>
