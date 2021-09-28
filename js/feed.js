@@ -6,8 +6,6 @@ const post = document.querySelector(".card");
 verMaisBtn.addEventListener("click", () => {
   const postClone = post.cloneNode(true);
   verMaisBtn.insertAdjacentElement('beforebegin', postClone)
-
-
 })
 
 // EX 3
