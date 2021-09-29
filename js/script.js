@@ -61,7 +61,7 @@ const formElements = [nameInput, email, password, surname, username, dateOfBirth
 // })
 
 function checkIfEmpty(input, errors) {
-  if (!input.value.length) {
+  if (!input.value.trim().length) {
     errors.push(`Preenha o campo ${input.name}, noob`);
   }
 };
@@ -76,8 +76,8 @@ form.addEventListener('submit', function (event) {
   if(errors.length) {
     errors.forEach(error => {
       errorContainer.innerHTML += `<li>${error}</li>`
-    })
--
+    });
+
     event.preventDefault();
   }
 });
