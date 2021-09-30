@@ -66,19 +66,53 @@ function checkIfEmpty(input, errors) {
   }
 };
 
-form.addEventListener('submit', function (event) {
-  const errors = [];
+function validateEmailInput() {
+  const isValidEmail = email.value.includes('@') && email.value.includes('.');
+  const isEmailWithinLimit = email.value.trim().length >= 10 && email.value.trim().length <= 100
 
-  for (let i = 0; i < formElements.length; i ++) {
-    checkIfEmpty(formElements[i], errors)
+  const span = email.nextElementSibling;
+  span.innerText = "";
+
+  if(!isValidEmail){
+    email.style.borderColor = "red";
+    span.innerText = 'O email deve ser valido!';
+    email.insertAdjacentElement('afterend', span);
+    return false;
   }
 
-  if(errors.length) {
-    errors.forEach(error => {
-      errorContainer.innerHTML += `<li>${error}</li>`
-    });
+  if(!isEmailWithinLimit){
+    email.style.borderColor = "red";
+    span.innerText = 'O email deve ter entre 10 e 100 caracteres!';
+    email.insertAdjacentElement('afterend', span);
+    return false;
+  }
 
+  email.style.borderColor = "green";
+
+  return true;
+}
+
+email.onblur = validateEmailInput;
+
+form.addEventListener('submit', function (event) {
+  // const errors = [];
+
+  // for (let i = 0; i < formElements.length; i ++) {
+  //   checkIfEmpty(formElements[i], errors)
+  // }
+
+  // if(errors.length) {
+  //   errors.forEach(error => {
+  //     errorContainer.innerHTML += `<li>${error}</li>`
+  //   });
+
+  //   event.preventDefault();
+  // }
+
+  if(!validateEmailInput()) {
     event.preventDefault();
   }
+
+  
 });
 

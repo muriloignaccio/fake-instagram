@@ -180,7 +180,7 @@ a{
 }
 
 .form-auth *{
-  margin: 10px 0;
+  margin: 10px 0 2px 0;
 }
 
 .form-auth input {
@@ -204,6 +204,14 @@ a{
 }
 .register.card{
     padding: 20px;
+}
+
+.error-message {
+  color: red;
+  text-align: left;
+  display: block;
+  margin: 0;
+  font-size: 12px;
 }
 
 @media(max-width:560px){
