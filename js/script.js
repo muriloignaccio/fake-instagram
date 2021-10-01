@@ -110,9 +110,39 @@ form.addEventListener('submit', function (event) {
   // }
 
   if(!validateEmailInput()) {
-    event.preventDefault();
+    return event.preventDefault();
   }
 
-  
+  event.preventDefault();
+
+  const [day, month, year] = dateOfBirth.value.split('/');
+  const formattedDate = new Date(year, month - 1, day).toISOString();
+
+
+  const user = {
+    name: nameInput.value,
+    surname: surname.value,
+    username: username.value,
+    email: email.value,
+    password: password.value,
+    dateOfBirth: formattedDate
+  }
+
+  console.log(user)
+
+  fetch('http://localhost:8000/users', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(user),
+  }).then(response => {
+    if (response.status === 201) {
+      location = './feed.html';
+    } else if (response.status === 400) {
+      alert('Deu erro se vira')
+    }
+    return response.json()
+  })
 });
 
