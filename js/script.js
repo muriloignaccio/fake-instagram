@@ -19,4 +19,38 @@ inputsFormCadastro.forEach((input) => {
 });
 
 // Atividade II - Exercício 3
-document.querySelector("body").style.backgroundColor = "#fafafa"
+document.querySelector("body").style.backgroundColor = "#fafafa";
+
+// Atividade API
+
+const form = document.querySelector(".form-auth");
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const user = {
+    name: form.name.value,
+    surname: form.surname.value,
+    username: form.username.value,
+    email: form.email.value,
+    password: form.password.value,
+    dateOfBirth: form.dateOfBirth.value,
+  };
+
+  const settings = {
+    method: "POST",
+    body: JSON.stringify(user),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+
+  try {
+    const response = await fetch("http://localhost:8000/users", settings);
+    const parsedResponse = await response.json();
+    if (response.status === 201) {
+      location = "feed.html";
+    }
+  } catch (error) {
+    alert(error)
+  }
+});
