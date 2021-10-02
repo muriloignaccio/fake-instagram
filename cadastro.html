@@ -5,7 +5,8 @@
     <title>Fake Instagram</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='./css/style.css' />
-    <script defer src="./js/script.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script defer src="./js/validations.js"></script>
 </head>
 
 <body>
@@ -50,11 +51,15 @@
             <input type="email" name="email" placeholder="Digite seu email">
             <span class="error-message"></span>
             <input type="text" name="name" placeholder="Digite seu nome completo">
+            <span class="error-message"></span>
             <input type="text" name="surname" placeholder="Digite seu último sobrenome">
+            <span class="error-message"></span>
             <input type="text" name="username" placeholder="Digite seu nome de usuario">
+            <span class="error-message"></span>
             <input type="password" name="password" placeholder="Senha">
-            <input type="text" name="dateOfBirth" placeholder="Digite a sua data de nascimento">
-            <ul class="errors-container"></ul>
+            <span class="error-message"></span>
+            <input type="date" name="dateOfBirth" placeholder="Digite a sua data de nascimento">
+            <span class="error-message"></span>
             <button type="submit">
                 Cadastre-se
             </button>
